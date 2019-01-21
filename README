@@ -1,0 +1,81 @@
+================================= Etapa 2 AA ==================================
+                                  - Sortare -
+Craciunoiu Cezar
+Grupa: 324CA
+
+In arhiva s-au adaugat urmatoarele foldere si fisiere:
+in/testID.in:
+	test0.in test cu un singur element
+	test1.in test cu elemente sortate
+	test2.in test cu elemente sortate invers
+	test3.in test in care toate elementele sunt egale
+	test4.in test in care aproape toate elementele sunt egale
+	test5.in test in care elementele sunt aproape sortate
+	test6.in test in care toate elementele sunt mici in afara de cateva
+	test7.in test cu elemente random
+	test8.in test cu elemente random
+	test9.in test cu elemente random
+
+out/testID.out:
+	Fisierele corecte rezultate folosite ca referinta.
+
+algo1.cpp:
+	Sursa ce contine implementarea RadixSort-ului pentru numere intregi
+	pozitive cat si numere cu virgula.
+
+algo.cpp:
+	Sursa ce contine implementarea RadixSort-ului doar pentru numere
+	naturale. A fost pus inca o data separat pentru a fi inscrisa la bonus.
+
+algo2.cpp:
+	Sursa ce contine implementarea ShellSort-ului pentru numere intregi.
+
+algo3.cpp:
+	Sursa ce contine implementarea TimSort-ului pentru numere intregi.
+
+algo.cpp:
+	Sursa ce contine doar implementarea RadixSort-ului pentru numere
+	intregi pozitive, pentru a fi inscris la bonus.
+
+algo.h:
+	Header ce contine semnatura celor 2 tipuri de functii.
+
+generator.cpp:
+	Sursa ce contine un generator simplu de numere intregi pozitive cat si
+	de numere cu zecimala. Trebuie precizat la input daca se doreste int
+	sau double.
+
+main.cpp:
+	Primeste ca argumente in linia de comanda locatia testului si tipul
+	de date ce se doreste sortat ("int"/"double").
+
+other_tests:
+	Folder ce contine un test si rezultatul sau pentru RadixSort cu
+	numere cu virgula. Rularea acestor teste nu e inclusa in checker.
+
+checker.sh:
+	Script bash ce ruleaza cei 3 algoritmi pentru testele din in si compara
+	output-ul cu fisierele din out.
+
+Makefile:
+	Contine toate regulile necesare compilarii surselor.
+
+In implementari se folosesc mai multe constante ce se pot modifica pentru a
+schimba comportamentul programelor cum ar fi: RUN din TimSort, PRECISION din
+RadixSort sau GAP din ShellSort. Se pot modifica pentru a schimba functionarea
+programelor, dar valoarea data ar trebui sa fie cea mai "eficienta".
+
+Pentru a se rula programul pentru un singur test(fara checker):
+- make <numele algoritmului>
+- ./<numele algoritmului> <locatie fisier input> <int/double (double la radix)>
+
+Daca se doreste rularea sursei algo.cpp trebuie facut alt main propriu, sau sa
+se respecte structura celui inclus, adaugandu-se o functie goala cu tip de
+date double.
+
+Referinte:
+ShellSort - https://github.com/royalpranjal/Algorithms/blob/master/Sorting/ShellSort.cpp
+TimSort - https://www.geeksforgeeks.org/timsort/
+Functie de generare a unui numar random double - https://stackoverflow.com/questions/2704521/generate-random-double-numbers-in-c
+RadixSort - https://www.geeksforgeeks.org/radix-sort/
+
